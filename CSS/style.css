@@ -1,0 +1,114 @@
+/*creo estilos predeterminados y se los ejecuto mediante el selector universal*/
+
+* {
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: normal;
+}
+
+
+/*centro los elementos y le paso color al body*/
+
+body {
+    position: relative;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #2a3132;
+}
+
+
+/*le doy aspectos a la portada*/
+
+.linea {
+    background-color: #fff;
+    width: 46px;
+    height: 6px;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+
+/*hago ajustes en el aspecto*/
+
+.container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 15px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.container:hover {
+    cursor: pointer;
+}
+
+.container:hover .linea {
+    background-color: #336b87;
+}
+
+.container:hover .linea-1 {
+    transform: translateY(-15px);
+}
+
+.container:hover .linea-2 {
+    opacity: 0;
+}
+
+.container:hover .linea-3 {
+    transform: translateY(15px);
+}
+
+
+/*oculto el indice*/
+
+.container .indice {
+    visibility: hidden;
+    position: absolute;
+    top: -8px;
+    left: -126px;
+}
+
+
+/*desoculto el indice cuando .container este en el estado de pseudoclase hover*/
+
+.container:hover .indice {
+    visibility: visible;
+}
+
+.container .indice ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    list-style-type: none;
+    padding: 14px;
+    opacity: 0;
+}
+
+.container:hover .indice ul {
+    opacity: 1;
+}
+
+
+/*hago correcciones en el indice*/
+
+.indice li a {
+    justify-content: center;
+    width: 100%;
+    color: #fff;
+    font-size: 20px;
+    transition: 0.2s ease;
+}
+
+
+/*le paso una pseudoclase al indice para darle color*/
+
+.indice li a:hover {
+    color: #336b87;
+}
