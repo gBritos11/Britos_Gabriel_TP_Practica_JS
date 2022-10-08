@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--creando respuestas 1-2-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--pasando estilos a las respuestas-->
+    <link rel="stylesheet" href="CSS/styleRespuestas.css">
+    <title>Respuestas</title>
+</head>
+
+<body>
+    <!--creando el header necesario-->
+    <header>
+        <div class="secu">
+            <img src="Imagenes/logo epet.png" alt="">
+            <h1>Tecnico programador</h1>
+        </div>
+        <div class="autor">
+            <p>Britos, Gabriel</p>
+        </div>
+    </header>
+
+    <!--respuesta 1-->
+    <div class="carta">
+        <!--parte de adelante de la carta-->
+        <div class="cara adelante">
+            <img src="Imagenes/Carta1.jpg" alt="">
+            <h2>1</h2>
+        </div>
+
+        <!--parte de atras de la carta, es decir, la respuesta-->
+        <div class="cara atras">
+            <h2>¿Qué versiones de JavaScript hay en el mercado?</h2>
+            <p>En el año 1995 nace, por Brendan Eich, el lenguaje Javascript; un lenguaje para interactuar con páginas web. Al año, ECMAScrip un consorcio Europeo que permitieron generar un estándar para que los navegadores lo siguieran (es decir, lenguajes
+                como JS empezaron a seguir estos estándares), lanzando en 1997 los primeros estándares para la primera versión de un lenguaje de scripting llamado ECMAScript. Desde ese momento hasta el día de hoy el grupo TC39 (un grupo de hackers, académicos
+                y distintas personas con conocimiento al respecto) son quienes se encargan de traer nuevas funcionalidades al ECMA.</p>
+            <p>Las versiones que hay de JavaScript en el mercado son:</p>
+            <ul>
+                <li>ES6: entre sus actualizaciones se encuentran ler, const y arrow functions, palabras reservadas para guardar variables.</li>
+                <li>ES7: sus actualizaciones más destacadas son exponentiation operator (una alternativa a Math.pow para poder realizar operaciones más claras) y array includes (para determinar si un elemento se encuentra dentro de un array).</li>
+                <li>ES8: algunas de las actualizaciones son: Object entries , una función que nos permite transformar un objeto en un array con cada una de las propiedades de un array de la forma [key, value]; String padding, un método que permite rellenar
+                    la cadena actual con una cadena dada. Las funciones asíncronas permitieron al lenguaje ejecutar código el cual es necesario obtener el resultado previo. Además, viene a solucionar el callback hell, entre otras tantas.</li>
+                <li>ES9: se incorporaron la posibilidad de usar grupos nombrados usando una expresión regular y la posibilidad de usar ciclos de forma asíncrona, esto permitiendo ejecutar código que no bloque el hilo principal de nuestra aplicación.</li>
+                <li>ES10: se mejoró el método flat de los array, ya que permite aplanar los elementos internos de un array permitiendo eliminar array internos.</li>
+                <li>ES11: Promise.allSettled es un método que retorna una promesa después de que todas las promesas dadas fueron completadas resueltas exitosamente o no, con un array de objetos que describe cada una de llamadas.</li>
+                <li>ES12: algo sencilo y de utilidad de que se implemento es poder separar los números con _ con la finalidad que la lectura del número sea más fácil y clara.</li>
+                <li>ES13: se implementó el método at que recibe un valor numérico entero y devuelve el elemento en esa posición, permitiendo valores positivos y negativos. Los valores negativos contarán desde el último elemento del array.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!--respuesta 2-->
+    <div class="carta">
+        <!--parte de adelante de la carta-->
+        <div class="cara adelante">
+            <img src="Imagenes/Carta2.jpg" alt="">
+            <h2>2</h2>
+        </div>
+
+        <!--parte de atras de la carta, es decir, la respuesta-->
+        <div class="cara atras">
+            <h2>¿Cómo se integra JavaScript a HTML?</h2>
+            <p>Todas las formas de integrar JS a HTML se hace mediante la etiqueta script; esta se puede introducir tanto en head como en el body del documento.</p>
+            <p>Las formas de hacerlo son 3:</p>
+            <ul>
+                <li>Mediante enlaces externos: apuntando el enlace a un archivo JS obtendremos como resultado un script en nuestro HTML. Este enlace debe ser colocado en el head y con el atributo src; por ejemplo: script src="#"script.</li>
+                <li>Mediante un script en el head: esto quiere decir que utilizaremos la etiqueta script para escribir código JS en el head del documento, ya que recordemos un script es un fragmento de código. Esto se hace cuando el script necesita estar
+                    disponible para la página mientras se está cargando.</li>
+                <li>Mediante un script en el body: es exactamente igual a la anterior forma, con la diferencia de escribir el script en el body del documento. Esto permite que el resto de la página se cargue sin tener que esperar a que se descarguen primero
+                    los recursos del JavaScript externo.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!--creando footer necesario-->
+    <footer>
+        <p>1</p>
+    </footer>
+</body>
+
+</html>
