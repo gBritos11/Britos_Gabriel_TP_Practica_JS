@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--creando respuestas 3-4-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--pasando estilos a las respuestas-->
+    <link rel="stylesheet" href="CSS/styleRespuestas.css">
+    <title>Respuestas</title>
+</head>
+
+<body>
+    <!--creando el header necesario-->
+    <header>
+        <div class="secu">
+            <img src="Imagenes/logo epet.png" alt="">
+            <h1>Tecnico programador</h1>
+        </div>
+        <div class="autor">
+            <p>Britos, Gabriel</p>
+        </div>
+    </header>
+
+    <!--respuesta 3-->
+    <div class="carta">
+        <!--parte de adelante de la carta-->
+        <div class="cara adelante">
+            <img src="Imagenes/Carta3.jpg" alt="">
+            <h2>3</h2>
+        </div>
+
+        <!--parte de atras de la carta, es decir, la respuesta-->
+        <div class="cara atras">
+            <h2>¿Cómo es el manejo de las variables, tipos de datos y expresiones regulares en JS?</h2>
+            <p>Una variable es un nombre dado a una ubicación de memoria, es la unidad mínima de almacenamiento en un programa; una analogía puede ser: las variables son cajas vacías a las cuales les podemos asignar un valor, es decir, guardar algo dentro
+                de ella.</p>
+            <p>A su vez, las variables tienen un tipo de dato dentro de ella tales como pueden ser datos numéricos (tanto enteros como reales), cadenas de caracteres, booleanos (verdadero o falso) y con la particularidad que tiene JS que se le agregan dos
+                tipos de datos más: nulos e indefinido. Además también cuenta con un objeto de tipo de datos compuestos, es decir, de los datos nombrados anteriormente.</p>
+            <p>Son 3 las primicias que priman en JS con respecto a las variables:</p>
+            <ul>
+                <li>El valor que le asignamos a determinada variable se puede modificar durante la ejecución del programa.</li>
+                <li>Una variable es solo un nombre dado a una ubicación de memoria, todas las operaciones realizadas en la variable afectan a esa ubicación de memoria.</li>
+                <li>Antes de poder hacer uso de las variables debemos declararlas.</li>
+            </ul>
+            <p>Para declarar variable debemos usar palabras claves tales como var, let o const. También tenemos la posibilidad de inicializar una variable al momento de declararla.</p>
+            <p>En JS tiene la ventaja de ser un lenguaje sin tipo, lo que quiere decir que las variables pueden guardar cualquier tipo de valor, lo que nos permite almacenar primero un dato tipo numérico y luego uno de tipo carácter en la misma variable,
+                por ejemplo.</p>
+            <p>En JS hay dos tipos de ámbitos para el alcance (el alcance de una variable es desde donde esta puede ser directamente accesible) de las variables: local y global. El ámbito global es el que esta fuera de las funciones y se puede llamar desde
+                cualquier función o parte del programa. Mientras que, el ámbito local es el que está dentro de la función que se está ejecutando.</p>
+            <p>En cuanto a las expresiones regulares son patrones que se utilizan para hacer coincidir combinaciones de caracteres en cadenas. En JavaScript, las expresiones regulares también son objetos. Estos patrones se utilizan con los métodos exec()
+                y test() de RegExp, y con match(), matchAll(), replace(), replaceAll() (en-US), search() y split() métodos de String.</p>
+            <p>Su funcionalidad se basa en la de describir un conjunto de cadenas para una determinada función, resultando de utilidad en proyectos tales como editores de textos que buscan y manipulan, justamente, textos.</p>
+            <p>Una de las formas de crear una expresión regular en JS es llamando a la función constructora del objeto RegExp. El uso de la función constructora proporciona una compilación en tiempo de ejecución de la expresión regular, esto es ventajoso
+                cuando, por ejemplo, no conoces el patrón y lo obtienes de otra fuente, como la entrada del usuario.</p>
+        </div>
+    </div>
+
+    <!--respuesta 4-->
+    <div class="carta">
+        <!--parte de adelante de la carta-->
+        <div class="cara adelante">
+            <img src="Imagenes/Carta19.jpg">
+            <h2>4</h2>
+        </div>
+
+        <!--parte de atras de la carta, es decir, la respuesta-->
+        <div class="cara atras">
+            <h2>¿Cómo son todas las formas de declaración de funciones en JS?</h2>
+            <p>Las definiciones de una función en JS constan de la palabra clave “function”, seguida del nombre de la función y los parámetros que deseemos pasarle; cabe resaltar que el código de la función va encerrado entre llaves, sin olvidar del return
+                para que nos retorne el valor que deseemos. Lo explicado anteriormente es la declaración de una función común, es decir, como se hace comúnmente, pero también existen otras.</p>
+            <p>Estas pueden ser:</p>
+            <ul>
+                <li>Funciones anónimas: ya que no tienen por qué tener nombre.</li>
+                <li>Funciones flecha: tiene una sintaxis reducida en comparación con las expresiones de funciones </li>
+                <li>Función IIFE: este tipo de funciones las creamos cuando queremos llamar a la función en una sola ocasión y obtener un resultado, ya que este tipo de funciones se ejecutan inmediatamente y no son accesibles posteriormente.</li>
+                <li>Función generator: la característica de estas funciones es que pueden parar, o salir, en un punto y retornar posteriormente a la ejecución desde donde quedamos, a diferencias de las otras funciones.</li>
+                <li>Shorthand method: Este forma de crear las funciones puede ser utilizado como método en la declaración de un objeto o en las clases de ES6.</li>
+                <li>Función constructor: podremos crear una variable que invoque a un objeto Function. Cuando invoquemos a este objeto podremos enviar todos los argumentos que deseemos. Los primeros n argumentos serán los parámetros de nuestra función y el
+                    último argumento será el código de nuestra función. Es una manera bastante inusual de declarar una función.</li>
+                <li>Funciones predefinidas: como pueden ser eval(), uneval(), isFinite(), isNaN(), escape(), unescape(), entre otras tantas.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!--creando footer necesario-->
+    <footer>
+        <p>2</p>
+    </footer>
+</body>
+
+</html>
