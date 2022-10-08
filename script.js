@@ -1,59 +1,46 @@
-//región
-const nacimiento = "10 de Diciembre del 2004";
-const apellido = `Britos`;
-var nombre = 'Gabriel';
-var materias = "Todas"
-let curso = `5to 4ta`;
-let a = 5;
-let b = 10;
-let c = 15;
-let d = 20;
-let e = 25;
-let f = 30;
-let g = 35;
-let h = 40;
-let estaciones = [`Verano`, `Otoño`, `Invierno`, `Primavera`]
-let usuario = { nombre, apellido, nacimiento, edad: `17`, estacionFavorita: `Verano`, materiaFavorita: `Programación Web` }
+//declarando las constantes, agregando el envio, es decir, el getElementById
+const nombre = document.getElementById("name")
+const email = document.getElementById("email")
+const pass = document.getElementById("password")
+const form = document.getElementById("form")
+const parrafo = document.getElementById("peligro")
 
-//Funciones
-function sumarNumeros(numero1, numero2) {
-    let sumaTotal = numero1 + numero2;
-    //console.log(sumaTotal);
-    console.log(`${numero1} + ${numero2} = ${sumaTotal}`);
-}
+//creando un evento. Este se accionará cuando apretemos el boton envíar
+form.addEventListener("submit", e => {
+    e.preventDefault()
 
-function restarNumeros(numero1, numero2) {
-    let sumaTotal = numero1 - numero2;
-    console.log(`${numero1} - ${numero2} = ${sumaTotal}`);
-}
+    //creando variable warnings. La utilizaremos más adelante
+    let warnings = ""
 
-function multiplicarNumeros(numero1, numero2) {
-    let sumaTotal = numero1 * numero2;
-    console.log(`${numero1} * ${numero2} = ${sumaTotal}`);
-}
+    let entrar = false //le dejo un valor a la variable entrar
 
-function dividirNumeros(numero1, numero2) {
-    let sumaTotal = numero1 / numero2;
-    console.log(`${numero1} / ${numero2} = ${sumaTotal}`);
-}
+    //con la variable regexEmail verifico que el mail se valido. La expresion regular la saque de una web que investigué
+    let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
 
-//endregión
-console.log(`Nombre: ${nombre}`);
-console.log(`Apellido: ${apellido}`);
-console.log(`Fecha de nacimiento: ${nacimiento}`);
-console.log(`Curso: ${curso}`);
-console.log(`Materias aprobadas: ${materias}`);
+    //variable para dejar mensaje mas adelante, de warnings o de felicitaciones
+    parrafo.innerHTML = ""
 
-console.log("Calculos matematicos: ");
-sumarNumeros(a, b);
-restarNumeros(c, d);
-multiplicarNumeros(e, f);
-dividirNumeros(g, h);
+    //agregando condicionales para los campos
+    if (nombre.value.length < 6) {
+        //en caso de que no se cumpla la condicional, mostrar mensaje a través de la variable warnings
+        warnings += `El nombre no es valido<br>`
+        entrar = true
+    }
+    if (!regexEmail.test(email.value)) {
+        //en caso de que no se cumpla la condicional, mostrar mensaje a través de la variable warnings
+        warnings += `El email no es valido<br>`
+        entrar = true
+    }
+    if (pass.value.length < 8) {
+        //en caso de que no se cumpla la condicional, mostrar mensaje a través de la variable warnings
+        warnings += `La contraseña no es valida<br>`
+        entrar = true
+    }
 
-console.log("Estaciones del año: ");
-for (cont = 0; cont <= 3; cont++) {
-    console.log(estaciones[cont]);
-}
-
-console.log("Datos del usuario: ");
-console.log(usuario)
+    //en caso de entrar y que este todo correcto, mostra mensaje
+    if (entrar) {
+        parrafo.innerHTML = warnings
+    } else {
+        parrafo.innerHTML = "felicitaciones widi, no eres un robot!!!!!"
+    }
+})
